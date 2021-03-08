@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.lvxiao.enums.autoconfigure.BaseEnumJacksonAutoConfiguration,\
+org.lvxiao.enums.autoconfigure.BaseEnumMybatisAutoConfiguration,\
+org.lvxiao.enums.autoconfigure.BaseEnumSpringMvcAutoConfiguration,\
+org.lvxiao.enums.autoconfigure.BaseEnumSwagger2AutoConfiguration

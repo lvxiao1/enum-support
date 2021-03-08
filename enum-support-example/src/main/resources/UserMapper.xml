@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.lvxiao.enums.example.mybatis.UserMapper">
+
+    <resultMap id="baseMap" type="org.lvxiao.enums.example.entity.User">
+        <id column="id" property="id"/>
+        <result property="sex" column="sex"/>
+    </resultMap>
+
+
+    <select id="selectId" resultMap="baseMap">
+        select *
+        from `user`
+        where `id` = #{id};
+    </select>
+
+    <select id="selectBySex" resultMap="baseMap">
+        select *
+        from `user`
+        where `sex` = #{sex};
+    </select>
+
+    <update id="update" parameterType="org.lvxiao.enums.example.entity.User">
+        update `user` set sex=#{user.sex} where id=#{user.id}
+    </update>
+
+
+</mapper>
